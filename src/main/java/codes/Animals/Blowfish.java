@@ -1,6 +1,6 @@
-package com.example;
+package codes.Animals;
 
-public class Blowfish extends Fish {
+public class Blowfish extends Fish implements AnimalBehavior {
     private boolean isPoisonous;
 
     public Blowfish() {
@@ -46,5 +46,15 @@ public class Blowfish extends Fish {
                 "isPoisonous=" + isPoisonous +
                 ", " + super.toString() +
                 '}';
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(getName() + " (Blowfish) rests near the seabed.");
+    }
+
+    @Override
+    public void move() {
+        System.out.println(getName() + " the Blowfish swims.");
     }
 }

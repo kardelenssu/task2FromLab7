@@ -1,4 +1,4 @@
-package com.example;
+package codes.Animals;
 
 public class Bird extends Animal {
     private String featherColor;

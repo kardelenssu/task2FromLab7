@@ -1,4 +1,4 @@
-package com.example;
+package codes.Animals;
 
 public class Fish extends Animal {
     private String waterType;

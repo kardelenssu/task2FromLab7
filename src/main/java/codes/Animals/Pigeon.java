@@ -1,6 +1,6 @@
-package com.example;
+package codes.Animals;
 
-public class Pigeon extends Bird {
+public class Pigeon extends Bird implements AnimalBehavior {
     private String species;
 
     public Pigeon() {
@@ -27,7 +27,7 @@ public class Pigeon extends Bird {
     }
 
     public void deliverMessage(String message) {
-        System.out.println(getName() + " the " + species + " pigeon delivers message: " + message);
+        System.out.println(getName() + " the " + species + " delivers message: " + message);
     }
 
     @Override
@@ -46,5 +46,15 @@ public class Pigeon extends Bird {
                 "species='" + species + '\'' +
                 ", " + super.toString() +
                 '}';
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(getName() + " (Pigeon) tucks head under wing and sleeps.");
+    }
+
+    @Override
+    public void move() {
+        System.out.println(getName() + " the Pigeon flies.");
     }
 }

@@ -1,4 +1,4 @@
-package com.example;
+package codes.Animals;
 
 public class Mammal extends Animal {
     private boolean isDomestic;

@@ -1,6 +1,6 @@
-package com.example;
+package codes.Animals;
 
-public class Dog extends Mammal {
+public class Dog extends Mammal implements AnimalBehavior {
     private String breed;
 
     public Dog() {
@@ -26,7 +26,6 @@ public class Dog extends Mammal {
         this.breed = breed;
     }
 
-    // Dog-specific method
     public void fetch() {
         System.out.println(getName() + " the " + breed + " is fetching the ball!");
     }
@@ -47,5 +46,15 @@ public class Dog extends Mammal {
                 "breed='" + breed + '\'' +
                 ", " + super.toString() +
                 '}';
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(getName() + " (Dog) curls up and sleeps.");
+    }
+
+    @Override
+    public void move() {
+        System.out.println(getName() + " the Dog runs.");
     }
 }
